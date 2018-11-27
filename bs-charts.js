@@ -37,13 +37,13 @@
  */
 const createCanves = function createCanves(options) {
     // 参数初始化
+    if (!options || Object.keys(options).length == 0) {
+        console.warn('请初始化options')
+        return
+    }
     let context = options.context
     if (!context) {
         console.warn('请初始化context')
-        return
-    }
-    if (!options || Object.keys(options).length == 0) {
-        console.warn('请初始化options')
         return
     }
     let xNumArray = options.xNumArray
